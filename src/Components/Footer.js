@@ -2,73 +2,25 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 100%;
-  min-height: 100vh;
-  background-image: url("https://static1.squarespace.com/static/582578e93e00be283bf5079b/t/58b8d0f8db29d626269154d0/1488507594476/mitch1.jpg?format=2500w");
-  background-size: cover;
-  background-position: right center;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-const Logo = styled.img`
-  width: 300px;
-`;
-
-const Menu = styled.div`
-  display: flex;
-  justify-content: center;
-  padding-top: 14px;
-  padding-bottom: 70px;
-`;
-
-const MenuItem = styled.a`
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 2px;
-  padding: 10px 14px;
-`;
-
-const DonwloadButton = styled.button`
-  text-transform: uppercase;
-  color: white;
-  background-color: transparent;
-  border: 2px solid white;
-  border-radius: 3px;
-  padding: 21px 34px;
-  font-size: 15px;
-  letter-spacing: 3px;
-  font-weight: 700;
-  font-family: "Raleway", Courier, monospace;
-  margin-bottom: 17px;
-`;
-
-const Image1 = styled.img`
-  padding: 17px;
-  width: 80%;
-`;
-
-const Image2 = styled.img`
-  padding: 17px;
-  width: 80%;
-`;
-
 const SocialContainer = styled.div`
+  padding: 1.5rem;
+  background-color: #1f1f1f;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 150px;
-  margin-right: 120px;
+  justify-content: center;
 
   & svg {
     color: black;
-    width: 32px;
-    height: 32px;
+    background-color: white;
+    width: 44px;
+    height: 44px;
     border: 2px solid white;
-    border-radius: 5px;
+    border-radius: 10px;
   }
 
   & svg:not(:last-child) {
@@ -76,25 +28,46 @@ const SocialContainer = styled.div`
   }
 
   & path {
-    fill: white;
+    fill: #1f1f1f;
   }
 `;
 
-const Welcome = () => {
+const InfosContainer = styled.div`
+  width: 100%;
+  padding: 40px 20px;
+  background-color: #171717;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-family: "Raleway";
+  font-size: 12px;
+  font-weight: 500;
+
+  & a {
+    display: inline-block;
+    padding: 1rem;
+  }
+`;
+
+const Address = styled.div`
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 20px;
+`;
+
+const CopyRight = styled.div`
+  font-size: 13.3px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 10px;
+  line-height: 20px;
+`;
+
+export default () => {
   return (
     <Container>
-      <Logo src="https://static1.squarespace.com/static/582578e93e00be283bf5079b/t/58a3a486e4fcb5cd4ba9d09b/1560122972716/?format=1500w" />
-      <Menu>
-        <MenuItem>WELCOME</MenuItem>
-        <MenuItem>MITCH'S 미친영어</MenuItem>
-        <MenuItem>APPLICATION</MenuItem>
-        <MenuItem>MITCH'S 10 TIPS</MenuItem>
-        <MenuItem>MITCH'S DAILY</MenuItem>
-        <MenuItem>ENGLISH CONTACT</MenuItem>
-      </Menu>
-      <DonwloadButton>download free for pc and android!</DonwloadButton>
-      <Image1 src="https://static1.squarespace.com/static/582578e93e00be283bf5079b/t/58be6a38c534a57a90f8cd8b/1489719734368/main.png?format=2500w" />
-      <Image2 src="https://static1.squarespace.com/static/582578e93e00be283bf5079b/t/58be3a4b44024341e95af455/1488861784449/?format=2500w" />
       <SocialContainer>
         <svg viewBox="0 0 64 64">
           <path d="M0,0v64h64V0H0z M39.6,22l-2.8,0c-2.2,0-2.6,1.1-2.6,2.6V28h5.3l-0.7,5.3h-4.6V47h-5.5V33.3H24V28h4.6V24 c0-4.6,2.8-7,6.9-7c2,0,3.6,0.1,4.1,0.2V22z" />
@@ -115,8 +88,29 @@ const Welcome = () => {
           <path d="M41.1,25H22.9l9.1,7.1L41.1,25z M44,26.6l-12,9.3l-12-9.3V39h24V26.6z M0,0v64h64V0H0z M47,42H17V22h30V42z" />
         </svg>
       </SocialContainer>
+      <InfosContainer>
+        <div>
+          <a href="http://blog.naver.com/happycymbals">BLOG</a>
+          <a href="https://mitchinenglish.com/dailyenglishblog">
+            MITCH'S DAILY ENGLISH
+          </a>
+        </div>
+        <Address>
+          <span>
+            MITCH'S 미친영어, 경기도 용인시 기흥구 중부대로746번길 21, S.
+          </span>
+          <span>KOREA224-56-00146</span>
+          <a href="ADMIN@MITCHINENGLISH.COM">ADMIN@MITCHINENGLISH.COM</a>
+        </Address>
+        <CopyRight>
+          Copyright 2016 by ‘Mitch's 미친영어’ All rights reserved
+        </CopyRight>
+        <CopyRight>
+          본 웹사이트의 어떤 부분도 사진 촬영, 녹음 또는 그 외 전자 장비 또는
+          기계적 방법을 포함한 그 어떠한 형식이나 수단으로도 무단 복제, 무단
+          배포, 무단 전송을 금함
+        </CopyRight>
+      </InfosContainer>
     </Container>
   );
 };
-
-export default Welcome;
